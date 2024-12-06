@@ -4,7 +4,8 @@
   "description": "Repositorio destinado a treinar minhas habilidades de teste com cypress e cucumber.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "npx cypress open"
   },
   "keywords": [],
   "author": "Renan Nunes Viana",
@@ -16,5 +17,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "step_definitions": "cypress/e2e/cucumber/Tests"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }

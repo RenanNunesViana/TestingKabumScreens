@@ -7,4 +7,4 @@ class GoToUserDashBoard {
     }
 }
 
-export default GoToUserDashBoard;
+export default new GoToUserDashBoard();

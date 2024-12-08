@@ -13,4 +13,4 @@ class CheckPersonalInfoPage{
     }
 }
 
-export default CheckPersonalInfoPage;
+export default new CheckPersonalInfoPage();

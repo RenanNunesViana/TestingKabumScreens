@@ -6,13 +6,14 @@ class LoginPage {
     }
     clickSubmitButton() {
         cy.get('[data-testid="login-submit-button"]').eq(0).click();
+        cy.wait(5000)
         return this;
     }
     verifyPageUsername(username) {
-        cy.get('[data-testid="drawerButton"]').check()
-        const textoDeBoasVindas = `Olá. ${username}`;
+        cy.get('[data-testid="drawerButton"]').eq(0).click();
+        const textoDeBoasVindas = `Olá. ${Cypress.env('USER_FIRST_NAME')}`;
 
-        return cy.contains('h4', textoDeBoasVindas).should('exist');
+        return cy.get('[id="menuLateral"] h4').contains(textoDeBoasVindas).should('exist');
     }
 }
 const login = new LoginPage();

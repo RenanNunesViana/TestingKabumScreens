@@ -8,13 +8,13 @@ Given("I am on the login page", () => {
 });
 
 When("I enter valid credentials", () => {
-    LoginPageCy.enterUserNamePassword(Cypress.env('username'), Cypress.env('password'));
+    LoginPageCy.enterUserNamePassword(Cypress.env('USERNAME'), Cypress.env('PASSWORD'));
 });
 
 And("I click on the login button", () => {
     LoginPageCy.clickSubmitButton()
 });
 
-Then("I should see the dashboard", () => {
+Then("I should see username in drawer button", () => {
     LoginPageCy.verifyPageUsername()
 });

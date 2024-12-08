@@ -5,10 +5,13 @@ class GoToLoginPage {
         );
     }
 
-    goToLoginPage(){
+    openHamburgerMenu() {
         cy.get('[data-testid="drawerButton"]')
             .eq(0)
             .click();
+    }
+
+    clickOnEnterButton() {
         cy.contains("button", "Entre").click();
     }
 }

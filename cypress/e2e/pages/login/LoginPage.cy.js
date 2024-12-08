@@ -15,6 +15,9 @@ class LoginPage {
 
         return cy.get('[id="menuLateral"] h4').contains(textoDeBoasVindas).should('exist');
     }
+    checkNotValidCredentialsMessage(message) {
+        cy.contains(message).should('exist');
+    }
 }
 const login = new LoginPage();
 export default login;
